@@ -28,7 +28,6 @@ void setup() {
   myDFPlayer.begin(SoftwareSerialPort);
   myDFPlayer.volume(30);
   delay(10000);
-  /**/
 }
 
 
@@ -39,11 +38,6 @@ void randomSplash(int duration){
     long timer2 = millis();
     onTime = random(30, 200);
     offTime = random(60, 700);
-    /*digitalWrite(LED_PIN, HIGH);
-    delay(onTime); 
-    digitalWrite(LED_PIN, LOW);
-    delay(offTime); */
-    
     while(millis() - timer2 < onTime){
       digitalWrite(LED_PIN, HIGH);
     }
@@ -57,7 +51,7 @@ void randomSplash(int duration){
 
 long current;
 void loop() {
-  /*if(digitalRead(SENSOR_PIN)){
+  if(digitalRead(SENSOR_PIN)){
     current = millis();
     //myDFPlayer.play(1);
     digitalWrite(COIL_PIN, HIGH);
@@ -76,19 +70,7 @@ void loop() {
      digitalWrite(LED_PIN, LOW);
      blower.write(100);
       while(millis() - current < TRESHOLD){}
-    }*/
-  /*digitalWrite(COIL_PIN, HIGH);
-  delay(10000);
-  digitalWrite(COIL_PIN, LOW);
-  delay(700);
-  digitalWrite(COIL_PIN, HIGH);
-  delay(500);
-  digitalWrite(COIL_PIN, LOW);
-  delay(500);
-  digitalWrite(COIL_PIN, HIGH);
-  delay(500);
-  digitalWrite(COIL_PIN, LOW);
-  delay(5000);*/
+    }
 }
 
 /*long readVcc() { //функция чтения внутреннего опорного напряжения, универсальная (для всех ардуин)
